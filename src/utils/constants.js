@@ -1,5 +1,5 @@
-const MAIN_API_URL = 'https://idiploma.nomoredomains.work';
-const MOVIES_API_URL = 'https://api.idiploma.nomoredomains.work';
+const MAIN_API_URL = 'https://api.idiploma.nomoredomains.work';
+const MOVIES_API_URL = 'https://api.nomoreparties.co';
 
 const DESKTOP_RESOLUTION = 1280;
 const TABLET_RESOLUTION = 768;

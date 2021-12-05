@@ -58,7 +58,7 @@
   padding: 0;
   display: flex;
   list-style: none;
-  align-items: end;
+  align-items: flex-end;
   grid-area: links;
 }
 

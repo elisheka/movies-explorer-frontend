@@ -52,6 +52,11 @@
 }
 
 .movies-card__icon {
+  appearance: none;
+  border: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
   display: block;
   width: 16px;
   height: 16px;

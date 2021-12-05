@@ -1,4 +1,4 @@
-import {useEffect, useMemo, useState} from 'react';
+import {useCallback, useEffect, useMemo, useState} from 'react';
 import {useLocation} from 'react-router-dom';
 import SearchFilm from '../SearchFilm/SearchFilm';
 import MoviesCardList from '../MoviesCardList/MoviesCardList';
@@ -33,14 +33,14 @@ const Movies = ({loggedIn}) => {
         })
         .catch(err => console.log(err));
     if (pathname === '/saved-movies') setMoviesVisibility('movies-card-list_visible');
-  }, []);
+  }, [pathname]);
 
-  const filterShortMovies = movies => {
+  const filterShortMovies = useCallback(movies => {
     if (isShortMovies) {
       return shortMovies(movies);
     }
     return movies.filter(movie => movie.duration >= SHORT_MOVIE_DURATION);
-  }
+  }, [isShortMovies])
 
   function handleShortMovies() {
     setIsShortMovies(!isShortMovies)
@@ -48,17 +48,17 @@ const Movies = ({loggedIn}) => {
 
   const processedMovies = useMemo(
       () => filterShortMovies(foundMovies),
-      [isShortMovies, foundMovies]
+      [filterShortMovies, foundMovies]
   );
 
   const processedRenderedMovies = useMemo(
       () => filterShortMovies(renderedMoviesList),
-      [isShortMovies, renderedMoviesList]
+      [filterShortMovies, renderedMoviesList]
   );
 
   const processedSavedMovies = useMemo(
       () => filterShortMovies(savedMovies),
-      [isShortMovies, savedMovies]
+      [filterShortMovies, savedMovies]
   );
 
   useEffect(() => {

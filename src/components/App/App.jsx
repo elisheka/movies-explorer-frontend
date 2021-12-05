@@ -21,7 +21,10 @@ const App = () => {
   const [currentUser, setCurrentUser] = useState({});
   const [isUpdateSuccess, setIsUpdateSuccess] = useState(false);
   const [isUpdateFail, setIsUpdateFail] = useState(false);
-  const [preloaderVisibility, setPreloaderVisibility] = useState('');
+  const [
+    // preloaderVisibility
+    ,setPreloaderVisibility
+  ] = useState('');
 
   const getToken = () => {
     return localStorage.getItem('token');

@@ -57,7 +57,8 @@ const MoviesCard = ({
         <div className="movies-card__description-wrapper">
           <p className="movies-card__title">{movieTitle}</p>
           <span className="movies-card__duration">{movieDuration}</span>
-          <img src={cardIconState}
+          <button
+               style={{backgroundImage: `url(${cardIconState})`}}
                alt="иконка кнопки, которая добавляет фильм в Сохранённые фильмы"
                className="movies-card__icon"
                onClick={movieIconBehaviorToggle}

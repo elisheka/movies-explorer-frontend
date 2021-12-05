@@ -80,9 +80,9 @@ class MainApi {
         year: movie.year,
         description: movie.description,
         image: `${MOVIES_API_URL}${movie.image.url}`,
-        thumbnail: `${MOVIES_API_URL}${movie.image.url}`,
+        thumbnail: `${MOVIES_API_URL}${movie.image.formats.thumbnail.url}`,
         trailer: movie.trailerLink,
-        movieId: movie.id.toString(),
+        movieId: String(movie.id),
         nameRU: movie.nameRU,
         nameEN: movie.nameEN
       })

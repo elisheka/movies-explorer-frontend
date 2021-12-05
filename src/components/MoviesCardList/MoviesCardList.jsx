@@ -29,7 +29,7 @@ const MoviesCardList = ({
     } else {
       setMoreButtonVisibility('movies-card-list__load-more_hidden')
     }
-  }, [movies, renderedMoviesList]);
+  }, [movies, renderedMoviesList, setMoreButtonVisibility]);
 
   useEffect(() => {
     const initialCards = countInitialCards();
@@ -42,6 +42,7 @@ const MoviesCardList = ({
     }
     if (loggedIn && foundMovies && JSON.parse(foundMovies).length > 0) setMoviesVisibility('movies-card-list_visible');
     if (loggedIn && foundMovies) setRenderedMoviesList(JSON.parse(foundMovies).slice(0, initialCards));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [movies, setRenderedMoviesList, pathname]);
 
   return (

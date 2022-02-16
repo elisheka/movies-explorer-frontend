@@ -13,10 +13,10 @@ const AboutMe = () => {
           <SectionTitle title={'Студент'}/>
           <div className="bio">
             <div className="bio__description">
-              <p className="bio__name">Илья</p>
+              <p className="bio__name">Элис</p>
               <p className="bio__job">Веб-разработчик, 43 года</p>
               <p className="bio__text">
-                Родился в Москве, живу в Москве, получил вычшее образование по специальности архитектор, сейчас — выпускник курса по веб-разработке Яндекс.Практикума.
+                Родилась в Москве, живу в Москве, получила вычшее образование по специальности архитектор, сейчас — выпускник курса по веб-разработке Яндекс.Практикума.
                 Люблю смотреть фильмы, заниматься цифровой графикой, путешествовать.
               </p>
 
@@ -29,7 +29,7 @@ const AboutMe = () => {
                   </a>
                 </li>
                 <li className="bio__list-item">
-                  <a href="https://github.com/ituniti/"
+                  <a href="https://github.com/elisheka/"
                      rel="noopener noreferrer"
                      target="_blank"
                      className="bio__external-link">Github

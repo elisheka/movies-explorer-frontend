@@ -1,7 +1,7 @@
 # [Movies Explorer](https://idiploma.nomoredomains.work/)
 Репозиторий для фронтенд-части проекта **Movies Explorer**.
 
-## Макет:
+## Макет Figma:
 https://www.figma.com/file/NTucrq9t7C0woLzd1cplI8/Diploma-(Copy)?node-id=891%3A3857
 
 ## Домен:
